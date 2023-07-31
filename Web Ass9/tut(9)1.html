@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What Day Is It?</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>What Day Is It?</h1>
+
+  <input type="text" id="day" placeholder="Enter a number 1-7" />
+  <button onclick="getDay()">Get Day</button>
+
+  <p id="dayName"></p>
+</div>
+
+<script>
+function getDay() {
+  var day = prompt("Enter a number 1-7");
+  var dayName = "";
+
+  if (day == 1) {
+    dayName = "Monday";
+  } else if (day == 2) {
+    dayName = "Tuesday";
+  } else if (day == 3) {
+    dayName = "Wednesday";
+  } else if (day == 4) {
+    dayName = "Thursday";
+  } else if (day == 5) {
+    dayName = "Friday";
+  } else if (day == 6) {
+    dayName = "Saturday";
+  } else if (day == 7) {
+    dayName = "Sunday";
+  } else {
+    dayName = "Invalid day";
+  }
+
+  document.getElementById("dayName").innerHTML = dayName;
+}
+</script>
+</body>
+</html>

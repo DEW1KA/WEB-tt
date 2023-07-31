@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHP Arithmetic Operations</title>
+</head>
+<body>
+<h1>PHP Arithmetic Operations</h1>
+
+<input type="text" id="x" placeholder="Enter the value of x" />
+<input type="text" id="y" placeholder="Enter the value of y" />
+
+<button onclick="calculate()">Calculate</button>
+
+<p>
+  <b>Addition:</b> <span id="addition"></span>
+</p>
+<p>
+  <b>Difference:</b> <span id="difference"></span>
+</p>
+<p>
+  <b>Product:</b> <span id="product"></span>
+</p>
+<p>
+  <b>Division:</b> <span id="division"></span>
+</p>
+
+<script>
+function calculate() {
+  var x = document.getElementById("x").value;
+  var y = document.getElementById("y").value;
+
+  var addition = x + y;
+  var difference = x - y;
+  var product = x * y;
+  var division = x / y;
+
+  document.getElementById("addition").innerHTML = addition;
+  document.getElementById("difference").innerHTML = difference;
+  document.getElementById("product").innerHTML = product;
+  document.getElementById("division").innerHTML = division;
+}
+</script>
+</body>
+</html>

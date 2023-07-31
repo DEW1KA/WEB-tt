@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>student registration</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+</style>
+</head>
+<body>
+ <h2>Student Registration Form</h2>
+    <form action="submit.php" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br><br>
+
+        <label for="firstname">First name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname"name="lastname"required><br>
+
+<br><br>
+
+        <label for="username">user name:</label>
+        <input type="text" id="username" name="username" 
+<br><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+<br><br><br>
+<label for="option_id">Gender</label>
+<br><br>
+<input type="radio" name="gender" value="male" id="male">Male
+<br><br>
+<input type="radio" name="gender" value="female" id="male">Female
+<br><br>
+<label for="Academic Year:">Achademic Year:</label>
+<br><br>
+<select name="Academic Year" id="dropdown_id">
+    <option value="option_value1">1st year</option>
+    <option value="option_value2">2nd year</option>
+    <option value="option_value3">3rd year</option>
+
+</select>
+<p>
+<label for="firstname">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="lastname">phone no:</label>
+        <input type="text" id="lastname"name="lastname"required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+<?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        // Retrieve the form data
+        $id = $_POST["id"];
+        $firstName = $_POST["name"];
+        $lastName = $_POST["lastname"];
+        $userName = $_POST["username"];
+        $password = $_POST["password"];
+        $gender = $_POST["gender"];
+        $academicYear = $_POST["Academic_Year"];
+        $email = $_POST["email"];
+        $phoneNo = $_POST["phone_no"];
+    ?>
+    <h2>Form Submission Result</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Name</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Academic Year</th>
+            <th>Email</th>
+            <th>Phone No</th>
+        </tr>
+        <tr>
+            <td><?php echo $id; ?></td>
+            <td><?php echo $firstName; ?></td>
+            <td><?php echo $lastName; ?></td>
+            <td><?php echo $userName; ?></td>
+            <td><?php echo $password; ?></td>
+            <td><?php echo $gender; ?></td>
+            <td><?php echo $academicYear; ?></td>
+            <td><?php echo $email; ?></td>
+            <td><?php echo $phoneNo; ?></td>
+        </tr>
+    </table>
+    <?php } ?>
+</html>

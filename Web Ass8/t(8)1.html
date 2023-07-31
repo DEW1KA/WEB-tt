@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Background Color</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #ccc;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Change Background Color</h1>
+
+  <button class="red" id="redButton">Red</button>
+  <button class="green" id="greenButton">Green</button>
+  <button class="blue" id="blueButton">Blue</button>
+</div>
+
+<script>
+function changeBackgroundColor(color) {
+  document.body.style.backgroundColor = color;
+}
+
+document.getElementById("redButton").addEventListener("mouseover", function() {
+  changeBackgroundColor("red");
+});
+
+document.getElementById("redButton").addEventListener("mouseout", function() {
+  changeBackgroundColor("white");
+});
+
+document.getElementById("greenButton").addEventListener("mouseover", function() {
+  changeBackgroundColor("green");
+});
+
+document.getElementById("greenButton").addEventListener("mouseout", function() {
+  changeBackgroundColor("white");
+});
+
+document.getElementById("blueButton").addEventListener("mouseover", function() {
+  changeBackgroundColor("blue");
+});
+
+document.getElementById("blueButton").addEventListener("mouseout", function() {
+  changeBackgroundColor("white");
+});
+</script>
+</body>
+</html>

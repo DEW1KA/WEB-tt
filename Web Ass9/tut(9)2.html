@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Confirm Box</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Google Confirm Box</h1>
+
+  <button onclick="showConfirmBox()">Go to Google</button>
+</div>
+
+<script>
+function showConfirmBox() {
+  var confirmBox = window.confirm("Are you sure you want to go to Google?");
+
+  if (confirmBox) {
+    window.location.href = "https://www.google.com";
+  } else {
+    alert("You decided to stay");
+  }
+}
+</script>
+</body>
+</html>

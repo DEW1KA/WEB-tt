@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Registration Form</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  background-color: #d3d3d3;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Car Registration Form</h1>
+
+  <label for="ownerName">Owner Name</label>
+  <input type="text" id="ownerName" name="ownerName" />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" />
+
+  <label for="phone">Phone Number</label>
+  <input type="number" id="phone" name="phone" />
+
+  <label for="country">Country</label>
+  <input type="text" id="country" name="country" />
+
+  <label for="carModel">Car Model</label>
+  <input type="text" id="carModel" name="carModel" />
+
+  <label for="manufacture">Manufacture</label>
+  <input type="text" id="manufacture" name="manufacture" />
+
+  <label for="year">Year</label>
+  <input type="number" id="year" name="year" />
+
+  <label for="transmission">Transmission</label>
+  <select id="transmission" name="transmission">
+    <option value="Manual">Manual</option>
+    <option value="Auto">Auto</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label for="terms">I agree to the terms and conditions</label>
+  <input type="checkbox" id="terms" name="terms" />
+
+  <input type="submit" value="Submit" />
+  <input type="reset" value="Reset" />
+</div>
+</body>
+</html>

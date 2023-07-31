@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day of the Week</title>
+</head>
+<body>
+  <h1>Day of the Week</h1>
+  <form action="" method="post">
+    <input type="text" name="day" placeholder="Enter a day number">
+    <input type="submit" value="Submit">
+  </form>
+  <?php
+  if (isset($_POST['day'])) {
+    $day = $_POST['day'];
+    switch ($day) {
+      case 1:
+        echo "Monday";
+        break;
+      case 2:
+        echo "Tuesday";
+        break;
+      case 3:
+        echo "Wednesday";
+        break;
+      case 4:
+        echo "Thursday";
+        break;
+      case 5:
+        echo "Friday";
+        break;
+      case 6:
+        echo "Saturday";
+        break;
+      case 7:
+        echo "Sunday";
+        break;
+      default:
+        echo "Invalid number";
+    }
+  }
+  ?>
+</body>
+</html>

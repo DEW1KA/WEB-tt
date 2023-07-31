@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruits Array</title>
+</head>
+<body>
+    <h1>List of Fruits</h1>
+
+    <?php
+    // Step 1: Create the array 'fruits' containing fruit names
+    $fruits = array('Apple', 'Banana', 'Orange', 'Grapes', 'Watermelon');
+    ?>
+
+    <ul>
+        <?php
+        // Step 2: Print each element of the array using a foreach loop
+        foreach ($fruits as $fruit) {
+            echo '<li>' . $fruit . '</li>';
+        }
+        ?>
+    </ul>
+</body>
+</html>
